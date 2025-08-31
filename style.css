@@ -1,0 +1,142 @@
+/* Fuente moderna y paleta pastel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --color-bg: #fceef5;              /* Fondo general rosa pastel */
+  --color-primary: #d88ac0;         /* Rosa suave para botones y títulos */
+  --color-secondary: #c06aa8;       /* Rosa más profundo para hover */
+  --color-accent: #f9c784;          /* Naranja pastel para bordes y detalles */
+  --color-white: #ffffff;
+  --color-console-bg: #f3e8ff;      /* Lila claro para consola */
+  --color-console-text: #a64ac9;    /* Lila intenso para texto consola */
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: #444;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.input-section,
+.result-section,
+.console-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--color-bg);
+  border-left: 5px solid var(--color-accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.input-section:hover,
+.result-section:hover,
+.console-section:hover {
+  transform: scale(1.01);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+select {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-primary);
+  width: 100%;
+  background-color: var(--color-white);
+  color: #444;
+}
+
+#resultados {
+  font-size: 1.1rem;
+  color: #5a2a6f;
+  padding-top: 1rem;
+}
+
+#consola {
+  background-color: var(--color-console-bg);
+  color: var(--color-console-text);
+  padding: 1rem;
+  border-radius: var(--radius);
+  height: 180px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
